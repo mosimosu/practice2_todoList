@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link href="../todoListProject/styles/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>My Todo List</title>
+  </head>
+  <body>
+    <header>
+      <h1>Mosi's Todo List</h1>
+    </header>
+
+    <form class="addForm" name="form">
+      <input type="text" />
+      <input type="number" min="1" max="12" placeholder="1" required />
+      <input type="number" min="1" max="31" placeholder="1" required />
+      <button id="submitBtn" type="submit">新增</button>
+    </form>
+
+    <br />
+    <br />
+    <div class="sortBtn">
+      <button type="submit">排序</button>
+    </div>
+
+    <section class="list"></section>
+
+    <script src="./app_advanced.js"></script>
+    <!-- <script src="./app.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  background: linear-gradient(90deg, rgba(210, 115, 23), rgba(45, 98, 23));
+}
+
+$textColor: rgba(33, 243, 115);
+$buttonTextColor: white;
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 3rem;
+    color: rgba($textColor, $alpha: 1);
+  }
+}
+
+.addForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px 5px;
+    margin: 0 0.2rem;
+    padding: 0.25rem;
+  }
+
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+  }
+
+  /* Chrome, Safari, Edge, Opera to hide arraows from input number*/
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox to thide arrows from input number*/
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  button {
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px 5px;
+    padding: 0.2rem;
+    cursor: pointer;
+    color: $buttonTextColor;
+    background-color: darkgoldenrod;
+  }
+}
+
+section.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div.todo {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0rem;
+    transition: all 0.2s ease;
+    p {
+      background-color: white;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+    }
+    p.todo-text {
+      width: 50%;
+    }
+    p.todo-date {
+      width: 20%;
+      align-items: center;
+    }
+
+    button {
+      padding: 0.25rem 0.5rem;
+      font-size: 1.75rem;
+      border: none;
+      cursor: pointer;
+      color: white;
+    }
+    button.complete {
+      background-color: green;
+    }
+    button.trash {
+      background-color: red;
+    }
+  }
+}
+
+div.sortBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0rem;
+
+  button {
+    cursor: pointer;
+    background-color: darkgoldenrod;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.75rem;
+    border-radius: 5px;
+  }
+}
+
+.done {
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  to {
+    transform: scale(0);
+  }
+}
